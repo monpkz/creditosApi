@@ -20,4 +20,9 @@ public class ClienteService {
         
         return repository.findAll();
     }
+
+    public void crearCliente(Cliente cliente){
+        repository.save(cliente);
+    }
+    
 }
