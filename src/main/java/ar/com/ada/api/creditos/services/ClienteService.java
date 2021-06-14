@@ -18,6 +18,6 @@ public class ClienteService {
     
     public List<Cliente> traerTodos(){
         
-        return repository.
+        return repository.findAll();
     }
 }
