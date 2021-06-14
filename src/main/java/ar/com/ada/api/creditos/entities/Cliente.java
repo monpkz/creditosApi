@@ -5,6 +5,8 @@ import java.util.*;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import org.hibernate.annotations.NaturalId;
 
 import ar.com.ada.api.creditos.excepciones.*;
@@ -31,8 +33,9 @@ public class Cliente {
     @Temporal(TemporalType.DATE) //SOLO Poner esto si no queremos manejar HORA en el DB Server.
     private Date fechaNacimiento;
     
+
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    //@JsonIgnore
+    @JsonIgnore
     private List<Prestamo> prestamos = new ArrayList<>();
 
     public Cliente(String nombre) {
