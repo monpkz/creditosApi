@@ -3,7 +3,8 @@ package ar.com.ada.api.creditos.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
-import antlr.collections.List;
+import java.util.List;
+
 import ar.com.ada.api.creditos.entities.Cliente;
 import ar.com.ada.api.creditos.services.ClienteService;
 
@@ -13,7 +14,7 @@ public class ClienteController {
     ClienteService service;
 
     public List<Cliente> traerTodos(){
-        return service.TraerTodos();
+        return service.traerTodos();
 
     }
 
